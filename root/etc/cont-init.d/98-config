@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv bash
+
+
+[[ -f /config/nginx/nginx.conf ]] && \
+    sed -Ei "s/worker_processes ([0-9]+)/worker_processes auto/" /config/nginx/nginx.conf
