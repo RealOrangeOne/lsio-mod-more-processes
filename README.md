@@ -1,17 +1,17 @@
 # docker-lsio-mod-more-processes
 
-Docker mod to set worker processes to auto for [LSIO](https://www.linuxserver.io/) containers.
+Docker mod to increase the number of processes run for applications inside the container.
 
 By default, any LSIO nginx installation ships using [4 worker processes](https://github.com/linuxserver/docker-baseimage-alpine-nginx/blob/master/root/defaults/nginx.conf#L4), which is inefficient for high-core machines. I've [opened](https://github.com/linuxserver/docker-baseimage-alpine-nginx/pull/53) PRs [before](https://github.com/linuxserver/docker-baseimage-alpine-nginx/pull/56), but they were all rejected for "backwards compatibility".
 
-This docker mod modifies the nginx config prior to startup, setting it to `auto`, which makes it match the number of available CPU cores. This matches how nginx is configured by default in Docker, so is stable.
+- Set Nginx' `worker_processes` to `auto`.
 
 ## Usage
 
 On any of your LSIO containers, set the following environment variable:
 
 ```
-DOCKER_MODS=theorangeone/docker-lsio-mod-more-processes:latest
+DOCKER_MODS=theorangeone/lsio-mod-more-processes:latest
 ```
 
 [More about docker mods](https://github.com/linuxserver/docker-mods#using-a-docker-mod)
