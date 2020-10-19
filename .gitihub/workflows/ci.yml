@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build image
-        run: docker build . --tag docker-mod-nginx-auto
+        run: docker build . --tag docker-lsio-mod-more-processes
       - name: Show image info
         run: docker images
 

@@ -1,4 +1,4 @@
-# docker-mod-nginx-auto
+# docker-lsio-mod-more-processes
 
 Docker mod to set worker processes to auto for [LSIO](https://www.linuxserver.io/) containers.
 
@@ -11,7 +11,7 @@ This docker mod modifies the nginx config prior to startup, setting it to `auto`
 On any of your LSIO containers, set the following environment variable:
 
 ```
-DOCKER_MODS=theorangeone/docker-mod-nginx-auto:latest
+DOCKER_MODS=theorangeone/docker-lsio-mod-more-processes:latest
 ```
 
 [More about docker mods](https://github.com/linuxserver/docker-mods#using-a-docker-mod)
