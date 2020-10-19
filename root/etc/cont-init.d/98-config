@@ -5,4 +5,4 @@
     sed -Ei "s/worker_processes ([0-9]+)/worker_processes auto/" /config/nginx/nginx.conf
 
 [[ ! -f /etc/php7/php-fpm.d/fpm-processes.conf ]] && \
-	cp /defaults/fpm-processes.conf /etc/php7/php-fpm.d/fpm-processes.conf
+	cp /defaults/fpm-processes.conf /etc/php7/php-fpm.d/z-fpm-processes.conf
