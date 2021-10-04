@@ -1,10 +1,14 @@
 #!/usr/bin/with-contenv bash
 
 
-[[ -f /config/nginx/nginx.conf ]] && \
+# Set nginx processes to `auto`
+if [[ -f /config/nginx/nginx.conf ]]
+then
     sed -Ei "s/worker_processes ([0-9]+)/worker_processes auto/" /config/nginx/nginx.conf
+fi
 
 
+# Increase number of FPM processes
 for fpm_dir in /etc/php*/php-fpm.d/
 do
     if [[ ! -f "$fpm_dir/z-fpm-processes.conf" ]]
