@@ -1,4 +1,4 @@
-# docker-lsio-mod-more-processes
+# lsio-mod-more-processes
 
 Docker mod to increase the number of processes run for applications inside the container.
 
